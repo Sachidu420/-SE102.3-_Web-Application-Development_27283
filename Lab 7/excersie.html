@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=2.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h2>Q 1</h2>
+    <button id="btn1">Q 1</button>
+    <h2>Q 2</h2>
+    <button id="btn2">Q 2</button>
+    <br><br>
+    <h2>Q 3</h2>
+    <button id="btn_red" class="btn">RED</button>
+    <button id="btn_green" class="btn">GREEN</button>
+    <button id="btn_blue" class="btn">BLUE</button>
+    <h2 id="sum"></h2>
+    <h2 id="avg"></h2>
+
+    <h2>Q 4</h2>
+    <button id="question4">Q 4</button>
+
+    <h2>Q 5</h2>
+    <button id="question5">Q 5</button>
+
+    <h2>Q 6</h2>
+    <button id="question6">Google</button>
+
+    <h2>Q 7</h2>
+    <button id="question7">Q 7</button>
+
+    <h2>Q 8</h2>
+    <button id="question8">Q 8</button>
+
+    <script>
+        document.getElementById("btn1").onclick = () =>{
+            window.alert("Alert");
+        }
+
+        document.getElementById("btn2").onclick = () => {
+            var tot = 0 ;
+            let sum = 1;
+            for(let i = 0 ; i <5 ; i++){
+                total +=parseInt(prompt("Please enter your mark " + sub++));
+            }
+            (total/5 > 30) ? window.alert("You passed.") : window.alert("you failed.");
+
+            document.getElementById("sum").innerHTML = "Total: " + tot;
+            document.getElementById("avg").innerHTML = "Average: " + tot/5;            
+        }
+
+        document.getElementById("btn_red").onmouseover = () => {
+            document.getElementById("btn_red").style.backgroundColor = "red";
+        } 
+        document.getElementById("btn_red").onmouseout = () => {
+            document.getElementById("btn_red").style.backgroundColor = "white";
+        } 
+
+        document.getElementById("btn_green").onmouseover = () => {
+            document.getElementById("btn_green").style.backgroundColor = "green";
+        } 
+        document.getElementById("btn_green").onmouseout = () => {
+            document.getElementById("btn_green").style.backgroundColor = "white";
+        } 
+        document.getElementById("btn_blue").onmouseover = () => {
+            document.getElementById("btn_blue").style.backgroundColor = "blue";
+        }
+        document.getElementById("btn_blue").onmouseout = () => {
+            document.getElementById("btn_blue").style.backgroundColor = "white";
+        }
+
+        document.getElementById("q4").onclick = () => {
+            var radius = prompt("Enter the radius of the circle");
+            alert("Area : " + Math.PI * radius * radius);
+        }
+
+        document.getElementById("q5").onclick = () => {
+            var day = parseInt(prompt("Enter a number from 1-7"));
+            var dayName = "";
+            switch (day) {
+                case 1:
+                dayName = "Monday";
+                break;
+                case 2:
+                dayName = "Tuesday";
+                break;
+                case 3:
+                dayName = "Wednesday";
+                break;
+                case 4:
+                dayName = "Thursday";
+                break;
+                case 5:
+                dayName = "Friday";
+                break;
+                case 6:
+                dayName = "Saturday";
+                break;
+                case 7:
+                dayName = "Sunday";
+                break;
+                default:
+                dayName = "Invalid input";
+                break;
+            }
+
+            alert(dayName);
+        }
+
+        document.getElementById("q6").onclick = () => {
+            var answer = confirm("Do you like to get forwarded to Google?");
+            (answer == true)? window.location.href = "https://www.google.com": alert("Thank you for staying here");
+
+        }
+        document.getElementById("q7").onclick = () => {
+            var n1 = parseInt(prompt("Enter your 1st number"));
+            var n2 = parseInt(prompt("Enter your 2nd number"));
+            var op = prompt("Enter the operator as per your wish (+, -, *, /)");
+
+            var r = 0;
+            switch (op) {
+                case "+":
+                r = n1 + n2;
+                break;
+                case "-":
+                r = n1 - n2;
+                break;
+                case "*":
+                r = n1 * n2;
+                break;
+                case "/":
+                r = n1 / n2;
+                break;
+                default:
+                alert("Invalid");
+                break;
+            }
+
+            alert(result);
+        }
+
+        document.getElementById("q8").onclick = () => {
+            var nic = prompt("Enter your NIC");
+            alert(nic.substring(0, 4));
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
